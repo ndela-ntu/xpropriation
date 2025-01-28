@@ -1,101 +1,130 @@
+import Divider from "@/components/Divider";
+import StarRating from "@/components/StarRating";
+import { PageData } from "@/lib/consts";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const data = PageData;
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen flex flex-col w-full items-center space-y-10">
+      {/*Our Commitment*/}
+      <div className="flex flex-col lg:flex-row justify-center lg:w-[70%]">
+        <div className="relative w-full aspect-square">
+          <Image
+            fill
+            className="object-cover"
+            alt="Image of property"
+            src={data.main.ourCommitment.imageUrl}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex flex-col p-5 justify-between">
+          <h1 className="text-3xl font-bold">
+            {data.main.ourCommitment.title}
+          </h1>
+          <p className="text-lg">{data.main.ourCommitment.description}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+            {data.main.ourCommitment.stats.map((stats) => (
+              <div className="flex flex-col">
+                <span className="flex space-x-2 text-2xl font-bold">
+                  <span>{stats.data}</span>
+                  <span>{stats.unit}</span>
+                </span>
+                <p>{stats.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/*Our Projects*/}
+      <div className="flex flex-col lg:w-[70%] space-y-5">
+        <span className="text-xl">Our work</span>
+        <h1 className="text-3xl font-bold">{data.main.ourProjects.title}</h1>
+        <p className="text-lg">{data.main.ourProjects.description}</p>
+        <Divider />
+        <div>
+          {data.main.ourProjects.projects.map((project, index) => (
+            <div className="flex flex-col space-y-10">
+              <div
+                className="flex flex-col lg:flex-row items-center justify-center"
+                key={index}
+              >
+                <div className="flex flex-col space-y-6 lg:w-[50%]">
+                  <div className="flex flex-col space-y-6">
+                    <span className="text-xl font-bold">{project.name}</span>
+                    <p>{project.description}</p>
+                  </div>
+                  <div className="flex space-x-4">
+                    <div className="flex">
+                      <span>#Client:</span>
+                      <span>{project.clientName}</span>
+                    </div>
+                    <div className="flex">
+                      <span>#Date:</span>
+                      <span>{project.date}</span>
+                    </div>
+                    <div className="flex">
+                      <span>#Focus:</span>
+                      <span>{project.focus}</span>
+                    </div>
+                  </div>
+                  <Link
+                    href={project.href}
+                    className="text-lg flex space-x-2 items-center"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight />
+                  </Link>
+                </div>
+                <div className="lg:w-[50%]  relative w-full aspect-square">
+                  <Image
+                    fill
+                    className="object-cover"
+                    alt="Image of property"
+                    src={project.imageUrl}
+                  />
+                </div>
+              </div>
+              <Divider />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/*Community Benefits*/}
+      <div className="flex flex-col space-y-10 justify-center lg:w-[70%]">
+        <h1 className="text-2xl font-bold">
+          {data.main.communityBenefits.title}
+        </h1>
+        <p>{data.main.communityBenefits.description}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {data.main.communityBenefits.ratings.map((rating) => (
+            <div className="border border-black p-7 flex flex-col space-y-5">
+              <span>
+                <StarRating rating={rating.rating} />
+              </span>
+              <p>{rating.comment}</p>
+              <div className="flex space-x-5 items-center">
+                <div className="w-16 relative aspect-square">
+                  <Image
+                    fill
+                    className="object-cover"
+                    alt="Image of property"
+                    src={rating.userImage}
+                    className="rounded-full"
+                 />
+                </div>
+                <div className="flex flex-col ">
+                  <span className="font-bold">{rating.username}</span>
+                  <span>{rating.role}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
