@@ -63,6 +63,7 @@ export const PageData: {
       title: string;
       description: string;
       bulletList: string[];
+      imageUrl: string;
     };
     joinOurMission: {
       title: string;
@@ -218,6 +219,7 @@ export const PageData: {
         "Incorporation of green building materials",
         "Implementation of water conservation techniques",
       ],
+      imageUrl: '/our-commitment.webp'
     },
     joinOurMission: {
       title: "Join Our Mission",

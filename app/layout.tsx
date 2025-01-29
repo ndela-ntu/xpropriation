@@ -38,8 +38,8 @@ export default function RootLayout({
           backgroundPosition: "center",
         }}>
           <Navbar />
-          <div className="flex flex-col justify-between items-center h-1/4 w-1/2 text-center flex-wrap">
-            <h1 className="text-2xl lg:text-4xl">{PageData.header.title}</h1>
+          <div className=" flex flex-col justify-between items-center h-1/2 w-full p-2.5 lg:h-1/4 lg:w-1/2 text-center flex-wrap">
+            <h1 className="text-3xl lg:text-4xl font-bold">{PageData.header.title}</h1>
             <p className="text-lg lg:text-xl">
               {PageData.header.description}
             </p>

@@ -7,29 +7,15 @@ import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 10); // Change 100 to match the header height
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <nav className="fixed top-0 left-0 w-full z-10">
       <div className="">
-        <div className={`flex justify-between items-center transition-all duration-300 h-20 px-4 sm:px-6 lg:px-8 ${isScrolled ? "bg-black text-white shadow-md": "bg-transparent text-white"}`}>
+        <div className={`flex justify-between items-center transition-all duration-300 h-20 px-4 sm:px-6 lg:px-8 bg-black text-white shadow-md`}>
           {/* Logo */}
           <div className="text-xl font-bold">MyLogo</div>
 
