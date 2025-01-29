@@ -32,34 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="flex flex-col h-screen text-white justify-center items-center w-full" style={{
-          backgroundImage: "url('/our-projects-1.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-          <Navbar />
-          <div className=" flex flex-col justify-between items-center h-1/2 w-full p-2.5 lg:h-1/4 lg:w-1/2 text-center flex-wrap">
-            <h1 className="text-3xl lg:text-4xl font-bold">{PageData.header.title}</h1>
-            <p className="text-lg lg:text-xl">
-              {PageData.header.description}
-            </p>
-            <div className="flex space-x-5">
-              <Link
-                href="/about-us"
-                className="text-black bg-white px-3 py-2.5 rounded-lg"
-              >
-                Learn More
-              </Link>
-              <Link
-                href="/our-projects"
-                className="text-white bg-transparent border px-3 py-2.5 rounded-lg"
-              >
-                Our Projects
-              </Link>
-            </div>
-          </div>
-        </header>
-        <main className="p-4">{children}</main>
+        <main className="">{children}</main>
         <footer className="text-black">
           <Divider color="#000" />
           <BottomNavBar />

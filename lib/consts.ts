@@ -219,7 +219,7 @@ export const PageData: {
         "Incorporation of green building materials",
         "Implementation of water conservation techniques",
       ],
-      imageUrl: '/our-commitment.webp'
+      imageUrl: "/our-commitment.webp",
     },
     joinOurMission: {
       title: "Join Our Mission",
@@ -270,5 +270,127 @@ export const PageData: {
         },
       ],
     },
+  },
+};
+
+export const AboutPageData: {
+  ourCommitment: {
+    title: string;
+    description: string;
+  };
+  featureList: { title: string; description: string }[];
+  team: {
+    title: string;
+    description: string;
+    teamMember: {
+      imageUrl: string;
+      fullname: string;
+      role: string;
+      bio: string;
+      linkedIn: string;
+      twitter: string;
+    }[];
+  };
+  joinMission: {
+    title: string;
+    description: string;
+  };
+} = {
+  ourCommitment: {
+    title: "Our Commitment to Community",
+    description:
+      "At EXPROPRIATION PROPERTY GROUP, we are dedicated to fostering sustainable and inclusive communities through our development projects.",
+  },
+  featureList: [
+    {
+      title: "Sustainability Focus",
+      description:
+        "We prioritize eco-friendly practices in all our projects, ensuring that our developments not only meet current needs but also protect the environment for future generations.",
+    },
+    {
+      title: "Inclusive Spaces",
+      description:
+        "Our goal is to create spaces that are accessible and welcoming to everyone, reflecting the diverse needs of the communities we serve.",
+    },
+    {
+      title: "Collaborative Approach",
+      description:
+        "We believe in working closely with community members and stakeholders, ensuring that our projects are tailored to meet their specific needs and aspirations.",
+    },
+  ],
+  team: {
+    title: "Our Dedicated Team",
+    description: "Meet the passionate individuals driving our mission forward.",
+    teamMember: [
+      {
+        imageUrl: "/person-7.webp",
+        fullname: "Alice Johnson",
+        role: "Executive Director",
+        bio: "Alice has over 15 years of experience in property development and is passionate about creating sustainable communities.",
+        linkedIn: "",
+        twitter: "",
+      },
+      {
+        imageUrl: "/person-8.webp",
+        fullname: "Mark Thompson",
+        role: "Project Manager",
+        bio: "Mark specializes in managing large-scale development projects and ensuring they align with community needs.",
+        linkedIn: "",
+        twitter: "",
+      },
+      {
+        imageUrl: "/person-9.webp",
+        fullname: "Sarah Lee",
+        role: "Community Engagement Coordinator",
+        bio: "Sarah focuses on building relationships with community members and facilitating their involvement in our projects.",
+        linkedIn: "",
+        twitter: "",
+      },
+      {
+        imageUrl: "/person-10.webp",
+        fullname: "David Kim",
+        role: "Sustainability Consultant",
+        bio: "David brings expertise in eco-friendly practices and ensures our projects are sustainable.",
+        linkedIn: "",
+        twitter: "",
+      },
+      {
+        imageUrl: "/person-11.webp",
+        fullname: "Emily Carter",
+        role: "Finance Officer",
+        bio: "Emily manages the financial aspects of our projects, ensuring transparency and accountability.",
+        linkedIn: "",
+        twitter: "",
+      },
+      {
+        imageUrl: "/person-12.webp",
+        fullname: "James Rodriguez",
+        role: "Urban Planner",
+        bio: "James designs community spaces that foster inclusivity and accessibility.",
+        linkedIn: "",
+        twitter: "",
+      },
+      {
+        imageUrl: "/person-13.webp",
+        fullname: "Linda Patel",
+        role: "Marketing Specialist",
+        bio: "Linda promotes our projects and engages the community through effective communication strategies.",
+        linkedIn: "",
+        twitter: "",
+      },
+      {
+        imageUrl: "/person-14.webp",
+        fullname: "Robert Green",
+        role: "Construction Supervisor",
+        bio: "Robert oversees the construction process, ensuring quality and safety standards are met.",
+        linkedIn: "",
+        twitter: "",
+      },
+    ],
+  },
+  joinMission: {
+    title: "Join Our Mission",
+    description:
+      "Discover how you can contribute to building sustainable communities.",
   },
 };
