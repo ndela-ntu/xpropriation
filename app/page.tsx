@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="min-h-screen flex flex-col w-full items-center space-y-10">
+      <div className="min-h-screen flex flex-col w-full items-center space-y-10 p-4">
         {/*Our Commitment*/}
         <div className="flex flex-col lg:flex-row justify-center lg:w-[70%]">
           <div className="relative w-full aspect-square">
@@ -223,27 +223,27 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {data.main.latestInsights.articlesAndInsights.map((insight) => (
               <div className="flex space-x-5">
-                <div className="w-[50%] relative aspect-square">
-                  <Image
-                    fill
-                    className="object-cover"
-                    alt="Image of property"
-                    src={insight.imageUrl}
-                  />
-                </div>
-                <div className="flex flex-col w-[50%] space-y-3">
-                  <span className="text-pink-500 text-sm">{insight.tag}</span>
-                  <h1 className="text-lg font-bold">{insight.title}</h1>
-                  <p className="text-sm">{insight.description}</p>
-                  <Link
-                    className="flex space-x-2.5 items-center"
-                    href={insight.href}
-                  >
-                    <span>Read More </span>
-                    <ArrowRight />
-                  </Link>
-                </div>
+              <div className="w-[80%] lg:w-[50%] relative aspect-square">
+                <Image
+                  fill
+                  className="object-cover"
+                  alt="Image of property"
+                  src={insight.imageUrl}
+                />
               </div>
+              <div className="flex flex-col w-[50%] space-y-3">
+                <span className="text-pink-500 text-sm">{insight.tag}</span>
+                <h1 className="text-lg font-bold">{insight.title}</h1>
+                <p className="text-sm">{insight.description}</p>
+                <Link
+                  className="flex space-x-2.5 items-center"
+                  href={insight.href}
+                >
+                  <span>Read More </span>
+                  <ArrowRight />
+                </Link>
+              </div>
+            </div>
             ))}
           </div>
         </div>

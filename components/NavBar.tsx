@@ -13,11 +13,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-10">
+    <nav className="fixed top-0 left-0 w-full z-10 text-white">
       <div className="">
         <div className={`flex justify-between items-center transition-all duration-300 h-20 px-4 sm:px-6 lg:px-8 bg-black text-white shadow-md`}>
           {/* Logo */}
-          <div className="text-xl font-bold">MyLogo</div>
+          <Link href="/" className="text-xl font-bold">Logo</Link>
 
           {/* Hamburger menu for small screens */}
           <div className="flex lg:hidden">
@@ -43,7 +43,7 @@ const Navbar = () => {
           </div>
           <div className="h-full hidden lg:flex items-center justify-center space-x-5">
             <Link
-              className="px-3 py-2.5 bg-transparent text-white rounded-lg shadow-lg"
+              className="px-3 py-2.5 bg-transparent border text-white rounded-lg shadow-lg"
               href="/get-involved"
             >
               Contact Us
@@ -60,13 +60,13 @@ const Navbar = () => {
 
       {/* Dropdown menu for small screens */}
       {isOpen && (
-        <div className="lg:hidden bg-gray-900 shadow-md flex flex-col items-center space-y-1.5">
+        <div className="lg:hidden bg-black shadow-md flex flex-col items-center space-y-1.5">
           {NavLinks.map((navLink, index) => (
             <Link key={index} href={navLink.href}>
               {navLink.name}
             </Link>
           ))}
-          <div className="flex">
+          <div className="flex space-x-5">
             <Link href="/get-involved">Contact Us</Link>
             <Link href="/get-involved">Learn More</Link>
           </div>

@@ -38,6 +38,8 @@ interface ArticlesAndInsights {
   title: string;
   description: string;
   href: string;
+  content: string;
+  date: string;
 }
 
 export const PageData: {
@@ -240,6 +242,9 @@ export const PageData: {
           description:
             "Discover how EXPROPRIATION PROPERTY GROUP is redefining property development through sustainable practices.",
           href: "/insights/1",
+          content:
+            "At EXPROPRIATION PROPERTY GROUP, we believe that sustainable development is not just a trend but a necessity for the future of our communities. Our approach integrates eco-friendly materials and energy-efficient designs into every project we undertake. By prioritizing sustainability, we aim to minimize our environmental footprint while maximizing the quality of life for residents. This commitment is reflected in our residential properties, educational facilities, and shopping malls, all designed with the communitys needs in mind. We engage with local stakeholders throughout the planning and development phases to ensure that our projects align with the aspirations of the community. This collaborative approach fosters a sense of ownership among residents, empowering them to take an active role in shaping their environment. Our projects are not just buildings; they are spaces that encourage social interaction, economic growth, and environmental stewardship. By incorporating community feedback, we create developments that truly reflect the values and needs of the people we serve. As we continue to grow, our mission remains clear: to create inclusive and sustainable communities that promote social equity and shared prosperity. We invite you to join us on this journey, whether through volunteering, partnerships, or simply spreading the word about our initiatives. Together, we can build a brighter future for all, one project at a time.",
+          date: "December 16, 2024",
         },
         {
           id: 2,
@@ -249,6 +254,9 @@ export const PageData: {
           description:
             "Learn how collaboration is at the heart of our property development projects.",
           href: "/insights/2",
+          content:
+            "Collaboration is a cornerstone of our philosophy at EXPROPRIATION PROPERTY GROUP. We believe that the best outcomes arise when diverse voices come together to share ideas and resources. Our projects are designed not only to meet the physical needs of the community but also to foster social connections and empower individuals. By involving beneficiaries in every stage of development, we create a sense of belonging and ownership that is vital for long-term success. Our team works closely with local organizations, government agencies, and community members to identify the unique challenges and opportunities within each neighborhood. This collaborative approach allows us to tailor our projects to the specific needs of the community, ensuring that our developments are both relevant and impactful. We also provide training and employment opportunities for local residents, equipping them with the skills needed to thrive in the construction and property management sectors. Through these efforts, we aim to create a ripple effect of positive change that extends beyond our projects. By empowering individuals and fostering collaboration, we contribute to the development of resilient communities that can adapt to future challenges. Join us in our mission to build a more inclusive and equitable society, where everyone has the opportunity to succeed.",
+          date: "December 16, 2024",
         },
         {
           id: 3,
@@ -258,6 +266,9 @@ export const PageData: {
           description:
             "Explore how social equity shapes our property development initiatives.",
           href: "/insights/3",
+          content:
+            "At EXPROPRIATION PROPERTY GROUP, we recognize that social equity is essential for creating thriving communities. Our mission is rooted in the belief that everyone deserves access to quality housing, education, and economic opportunities. By prioritizing social equity in our development projects, we aim to address systemic inequalities and create environments where all individuals can flourish. This commitment drives our decision-making processes and shapes the way we engage with the communities we serve. We actively seek to include marginalized voices in our planning and development efforts, ensuring that their needs and perspectives are heard and valued. This inclusive approach not only enhances the quality of our projects but also fosters a sense of community ownership and pride. By creating spaces that reflect the diversity of the population, we contribute to a more equitable society where everyone has the chance to thrive. As we move forward, we remain dedicated to advancing social equity through our initiatives. We invite you to learn more about our projects and how you can get involved in promoting social justice within your community. Together, we can create a future where everyone has the opportunity to succeed, regardless of their background.",
+          date: "December 16, 2024",
         },
         {
           id: 4,
@@ -267,6 +278,9 @@ export const PageData: {
           description:
             "Discover the innovative strategies we employ to promote eco-friendly property development.",
           href: "/insights/4",
+          content:
+            "Innovation is at the heart of our approach to eco-friendly property development at EXPROPRIATION PROPERTY GROUP. We continuously explore new technologies and methodologies that enhance the sustainability of our projects. From utilizing renewable energy sources to implementing green building practices, our goal is to create developments that are not only environmentally responsible but also economically viable. By embracing innovation, we can lead the way in transforming the property development landscape. Our team collaborates with experts in sustainable design and construction to integrate cutting-edge solutions into our projects. This includes the use of recycled materials, energy-efficient systems, and water conservation techniques. By prioritizing these practices, we not only reduce our ecological footprint but also create healthier living environments for residents. Our commitment to innovation ensures that our developments are future-proof and resilient in the face of climate change. As we continue to push the boundaries of eco-friendly development, we invite you to join us in our mission. Whether through supporting our initiatives or adopting sustainable practices in your own life, every action counts. Together, we can create a more sustainable future for our communities and the planet.",
+          date: "December 16, 2024",
         },
       ],
     },
@@ -393,4 +407,207 @@ export const AboutPageData: {
     description:
       "Discover how you can contribute to building sustainable communities.",
   },
+};
+
+export const OurProjectsPageData: {
+  title: string;
+  description: string;
+  ourProjects: {
+    title: string;
+    subTitle: string;
+    description: string;
+    projects: ProjectStat[];
+  };
+} = {
+  title: "Our Projects",
+  description:
+    "Explore our diverse projects, from residential complexes to educational facilities, all designed to foster sustainable and inclusive communities.",
+  ourProjects: {
+    title: "OUR PROJECTS",
+    subTitle: "Showcasing Our Developments",
+    description:
+      "Explore our diverse range of projects that enhance community living and promote sustainability.",
+    projects: [
+      {
+        id: 1,
+        name: "Green Haven",
+        description:
+          "A state-of-the-art residential complex designed with sustainability in mind, featuring green spaces and energy-efficient buildings.",
+        clientName: "City of Springfield",
+        date: "May 2022",
+        focus: "Sustainability",
+        href: "/our-projects/1",
+        imageUrl: "/our-projects-1.webp",
+      },
+      {
+        id: 2,
+        name: "Springfield Learning Center",
+        description:
+          "An educational facility aimed at providing accessible learning opportunities for all ages, equipped with modern classrooms and community resources.",
+        clientName: "N/A",
+        date: " January 2023",
+        focus: "Education",
+        href: "/our-projects/2",
+        imageUrl: "/our-projects-2.webp",
+      },
+      {
+        id: 3,
+        name: "Market Square Mall",
+        description:
+          "A shopping mall that features local businesses and promotes community engagement through various events and activities.",
+        clientName: "Local Business Association",
+        date: "August 2023",
+        focus: "Community Engagement",
+        href: "/our-projects/3",
+        imageUrl: "/our-projects-3.webp",
+      },
+    ],
+  },
+};
+
+export const OurProjectsLinkData: {
+  id: number;
+  imageUrl: string;
+  projectTitle: string;
+  description: string;
+  tags: string[];
+  grid: { name: string; description: string }[];
+  heading: string;
+  propertyDescription: string;
+  client: string;
+  date: string;
+  role: string;
+  projectType: string;
+}[] = [
+  {
+    id: 1,
+    imageUrl: "/our-projects-1.webp",
+    projectTitle: "Welcome to Green Haven",
+    description:
+      "Discover the Green Haven Residential Complex, a pioneering project that embodies our commitment to sustainability and community well-being.",
+    tags: [
+      "Eco-friendly design",
+      "Community-focused amenities",
+      "Energy-efficient buildings",
+    ],
+    grid: [
+      { name: "Features", description: "Sustainable" },
+      { name: "Amenities", description: "Inclusive" },
+      { name: "Location", description: "Springfield" },
+      { name: "Completion", description: "May 2022" },
+    ],
+    heading: "Lorem Ipsum Heading",
+    propertyDescription:
+      "Green Haven Residential Complex is a pioneering project that embodies our commitment to sustainable living. This state-of-the-art residential complex not only provides modern housing but also integrates green spaces and energy-efficient designs, promoting a healthier lifestyle for its residents. Our approach ensures that the community thrives in an environment that respects nature and fosters social interaction.",
+    client: "City of Springfield",
+    date: "May 2022",
+    role: "Lead Developer",
+    projectType: "Residential Complex",
+  },
+  {
+    id: 2,
+    imageUrl: "/our-projects-2.webp",
+    projectTitle: "Empowering Education",
+    description:
+      "At the Springfield Community Learning Center, we believe in accessible learning for everyone, fostering a community of lifelong learners through innovative educational programs.",
+    tags: ["Inclusive Learning", "Community Engagement", "Modern Facilities"],
+    grid: [
+      { name: "Mission", description: "Empower" },
+      { name: "Vision", description: "Inspire" },
+      { name: "Values", description: "Equity" },
+      { name: "Goals", description: "Sustainability" },
+    ],
+    heading: "Lorem Ipsum Heading",
+    propertyDescription:
+      "Springfield Community Learning Center is a transformative educational facility designed to provide accessible learning opportunities for individuals of all ages. This project emphasizes community engagement and aims to foster a love for learning through modern classrooms and various community resources. Our commitment to inclusivity ensures that everyone can benefit from the educational programs offered here.",
+    client: "City of Springfield",
+    date: "January 2023",
+    role: "Project Manager",
+    projectType: "Residential Complex",
+  },
+  {
+    id: 3,
+    imageUrl: "/our-projects-3.webp",
+    projectTitle: "Welcome to Market Square",
+    description:
+      "Discover a vibrant shopping experience that brings together local businesses and fosters community spirit through engaging events and activities.",
+    tags: ["Local Business Support", "Community Events", "Inclusive Spaces"],
+    grid: [
+      { name: "Engagement", description: "Active" },
+      { name: "Local", description: "Vendors" },
+      { name: "Events", description: "Activities" },
+      { name: "Community", description: "Connection" },
+    ],
+    heading: "Lorem Ipsum Heading",
+    propertyDescription:
+      "Market Square Shopping Mall is designed to be a vibrant hub for the community, featuring a variety of local businesses and spaces for community events. Our goal is to foster a sense of belonging and support local entrepreneurs, ensuring that the mall serves as a gathering place for all residents.",
+    client: "Local Business Association",
+    date: "August 2023",
+    role: "Project Developer",
+    projectType: "Residential Complex",
+  },
+];
+
+export const SustainibilityPage: {
+  backgroundImage: string;
+  facts: { name: string; description: string }[];
+  practicesTitle: string;
+  practiceDescription: string;
+  otherFacts: { title: string; description: string }[];
+} = {
+  backgroundImage: "/sustainibility-practices.jpg",
+  facts: [
+    {
+      name: "Our Commitment to Sustainability",
+      description:
+        "At EXPROPRIATION PROPERTY GROUP, we are dedicated to creating sustainable and inclusive communities. Our eco-friendly practices are at the core of our development projects, ensuring that we not only meet the needs of the community but also protect our environment for future generations.",
+    },
+    {
+      name: "Discover Our Eco-Friendly Initiatives",
+      description:
+        "Learn more about how we integrate sustainability into every aspect of our projects, from planning to construction.",
+    },
+  ],
+  practicesTitle: "Innovative Eco-Friendly Practices",
+  practiceDescription:
+    "At EXPROPRIATION PROPERTY GROUP, we integrate sustainable practices into every phase of our projects. From using renewable materials to implementing energy-efficient designs, our methods are designed to minimize environmental impact and promote a greener future.",
+  otherFacts: [
+    {
+      title: "Renewable Materials",
+      description:
+        "We prioritize the use of sustainable materials to reduce carbon footprint.",
+    },
+    {
+      title: "Energy Efficiency",
+      description:
+        "Our designs focus on maximizing energy efficiency in all buildings.",
+    },
+  ],
+};
+
+export const GetInvolvedPage: {
+  title: string;
+  description: string;
+  joinOurTitle: string;
+  joinOurDescription: string;
+  statements: { title: string; description: string }[];
+} = {
+  title: "Join Our Community Efforts",
+  description:
+    "At EXPROPRIATION PROPERTY GROUP, we believe in the power of collaboration and community involvement. Join us in creating sustainable and inclusive spaces that empower individuals and promote shared prosperity.",
+  joinOurTitle: "Join Our Volunteer Team for Community Growth",
+  joinOurDescription:
+    "At EXPROPRIATION PROPERTY GROUP, volunteers play a crucial role in shaping sustainable communities. By joining our team, you can contribute to projects that promote social equity and shared prosperity. We offer diverse roles that leverage your skills and passion.",
+  statements: [
+    {
+      title: "Project Support",
+      description:
+        "Assist in planning and executing community projects, ensuring they meet sustainability goals.",
+    },
+    {
+      title: "Community Outreach",
+      description:
+        "Engage with local residents to gather input and foster collaboration in our initiatives",
+    },
+  ],
 };
